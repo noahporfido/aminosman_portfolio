@@ -26,14 +26,14 @@
 	<h2 class="italic text-6xl mt-2 uppercase">Portfolio</h2>
 </div>
 
-<div class="w-full flex gap-x-8">
-	<p class="mt-8 pl-8 w-96">
+<div class="w-full flex flex-wrap gap-x-8">
+	<p class="mt-8 pl-8 xl:w-1/3 max-w-md">
 		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
 		ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
 		dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
 		sit amet.
 	</p>
-	<div>
+	<div class="flex-1">
 		<div class="flex justify-center mb-8">
 			<div class="flex items-center flex-col">
 				<p class="font-light">refresh</p>
@@ -44,17 +44,9 @@
 				>
 			</div>
 		</div>
-		<!-- <div class="flex mt-8 align-baseline w-full"> -->
 		{#if imagesToDisplay.length}
-			<div class="flex gap-x-4 h-[500px] w-full justify-center">
+			<div class="flex gap-x-4 h-[500px] overflow-hidden w-full justify-center xl:p-0 p-8">
 				<div class="flex-col flex justify-end">
-					<!-- <div class="relative pt-[56.25%]">
-						<img
-							alt={imagesToDisplay[0].title}
-							src={imagesToDisplay[0].url}
-							class="absolute left-0 top-0 w-full h-auto"
-						/>
-					</div> -->
 					<img
 						alt={imagesToDisplay[0].title}
 						src={imagesToDisplay[0].url}
@@ -71,11 +63,11 @@
 				</div>
 
 				<div class="flex-col flex justify-end">
-					<div class="relative pt-[56.25%]">
+					<div class="relative ">
 						<img
 							alt={imagesToDisplay[1].title}
 							src={imagesToDisplay[1].url}
-							class="absolute left-0 top-0 w-full h-auto"
+							class="max-w-sm w-full h-auto"
 						/>
 					</div>
 					<p class="">
@@ -86,9 +78,4 @@
 			</div>
 		{/if}
 	</div>
-	<!-- </div> -->
-
-	<div class="flex flex-col items-center " />
 </div>
-
-<!-- src={imagesToDisplay[0].url} -->
