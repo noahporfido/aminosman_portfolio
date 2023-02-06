@@ -21,51 +21,71 @@
 	};
 </script>
 
-<div class="p-8">
+<div class="p-8 ">
 	<h1 class="font-bold text-6xl uppercase">Amin Osman</h1>
 	<h2 class="italic text-6xl mt-2 uppercase">Portfolio</h2>
-	<p class="mt-8">
+</div>
+
+<div class="w-full flex gap-x-8">
+	<p class="mt-8 pl-8 w-96">
 		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
 		ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
 		dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
 		sit amet.
 	</p>
-</div>
-
-<div class="w-full">
-	<div class="flex justify-center mb-8">
-		<div class="flex items-center flex-col">
-			<p class="font-light">refresh</p>
-			<button
-				class="p-4 mt-2 bg-gray-200 hover:bg-gray-300 transition-all rounded-full"
-				on:click={getRandomImages}><img src="/images/pfeil.svg" class="h-8 w-8" /></button
-			>
+	<div>
+		<div class="flex justify-center mb-8">
+			<div class="flex items-center flex-col">
+				<p class="font-light">refresh</p>
+				<button
+					class="p-4 mt-2 bg-gray-200 hover:bg-gray-300 transition-all rounded-full"
+					on:click={getRandomImages}
+					><img src="/images/pfeil.svg" alt="arrow" class="h-8 w-8" /></button
+				>
+			</div>
 		</div>
+		<!-- <div class="flex mt-8 align-baseline w-full"> -->
+		{#if imagesToDisplay.length}
+			<div class="flex gap-x-4 h-[500px] w-full justify-center">
+				<div class="flex-col flex justify-end">
+					<!-- <div class="relative pt-[56.25%]">
+						<img
+							alt={imagesToDisplay[0].title}
+							src={imagesToDisplay[0].url}
+							class="absolute left-0 top-0 w-full h-auto"
+						/>
+					</div> -->
+					<img
+						alt={imagesToDisplay[0].title}
+						src={imagesToDisplay[0].url}
+						class=" max-w-sm w-full h-auto"
+					/>
+					<p>
+						{imagesToDisplay[0].title},{imagesToDisplay[0].year},{imagesToDisplay[0]
+							.material},{imagesToDisplay[0].mass}
+					</p>
+				</div>
+
+				<div class="h-full flex flex-col items-center">
+					<div class="w-[1px] h-full bg-black " />
+				</div>
+
+				<div class="flex-col flex justify-end">
+					<div class="relative pt-[56.25%]">
+						<img
+							alt={imagesToDisplay[1].title}
+							src={imagesToDisplay[1].url}
+							class="absolute left-0 top-0 w-full h-auto"
+						/>
+					</div>
+					<p class="">
+						{imagesToDisplay[1].title},{imagesToDisplay[1].year},{imagesToDisplay[1]
+							.material},{imagesToDisplay[1].mass}
+					</p>
+				</div>
+			</div>
+		{/if}
 	</div>
-	<!-- <div class="flex mt-8 align-baseline w-full"> -->
-	{#if imagesToDisplay.length}
-		<div class="flex gap-x-4 max-h-96 w-full justify-center">
-			<div class="flex-col flex justify-end">
-				<img alt={imagesToDisplay[0].title} src={imagesToDisplay[0].url} class="max-w-full" />
-				<p class="">
-					{imagesToDisplay[0].title},{imagesToDisplay[0].year},{imagesToDisplay[0]
-						.material},{imagesToDisplay[0].mass}
-				</p>
-			</div>
-
-			<div class="h-full flex flex-col items-center">
-				<div class="w-[1px] h-full bg-black " />
-			</div>
-
-			<div class="flex-col flex justify-end">
-				<img alt={imagesToDisplay[1].title} src={imagesToDisplay[1].url} class=" max-w-full" />
-				<p class="">
-					{imagesToDisplay[1].title},{imagesToDisplay[1].year},{imagesToDisplay[1]
-						.material},{imagesToDisplay[1].mass}
-				</p>
-			</div>
-		</div>
-	{/if}
 	<!-- </div> -->
 
 	<div class="flex flex-col items-center " />
