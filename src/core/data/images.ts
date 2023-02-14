@@ -31,21 +31,21 @@ export const imageData: image[] = [
 	},
 	{
 		year: '2002',
-		mass: '12312',
+		mass: 'asd',
 		title: '432423',
 		material: '2343',
 		url: '/images/5.jpg'
 	},
 	{
 		year: '2002',
-		mass: '12312',
+		mass: 'ol',
 		title: '432423',
 		material: '2343',
 		url: '/images/6.jpg'
 	},
 	{
 		year: '2002',
-		mass: '12312',
+		mass: 'lol',
 		title: '432423',
 		material: '2343',
 		url: '/images/7.jpg'

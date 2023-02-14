@@ -5,15 +5,19 @@
 
 	let imagesToDisplay: Image[] = [];
 
+	let isIconRotated = false;
+
 	onMount(() => {
 		getRandomImages();
 	});
 
 	const getRandomImages = () => {
 		imagesToDisplay.length = 0;
-
+		isIconRotated = true;
+		console.log(isIconRotated);
 		imagesToDisplay.push(getRandomImageFromArray());
 		imagesToDisplay.push(getRandomImageFromArray());
+		isIconRotated = false;
 	};
 
 	const getRandomImageFromArray = (): Image => {
@@ -28,24 +32,26 @@
 
 <div class="w-full flex flex-wrap gap-x-8">
 	<p class="mt-8 pl-8 xl:w-1/3 max-w-md">
-		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-		ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-		dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-		sit amet.
+		Zufall, Zufall, Zufall Klicke dich durch und lass den Zufall zu. Eine ausgewählte Sammlung von
+		Bildern seit August 2022. Verschiedenste Bilder die alle etwas mit mir zu tun haben. Kombiniere
+		und finde komische, lustige und interessante Zusammenhänge. Der Zufall bestimmt, deshalb musst
+		du umso genauer hinschauen!
 	</p>
 	<div class="flex-1">
 		<div class="flex justify-center mb-8">
 			<div class="flex items-center flex-col">
 				<p class="font-light">refresh</p>
 				<button
-					class="p-4 mt-2 bg-gray-200 hover:bg-gray-300 transition-all rounded-full"
+					class="{isIconRotated
+						? 'rotate-180'
+						: 'rotate-180'} p-4 mt-2 bg-gray-200 hover:bg-gray-300 transition-all rounded-full"
 					on:click={getRandomImages}
-					><img src="/images/pfeil.svg" alt="arrow" class="h-8 w-8" /></button
+					><img src="/images/pfeil.svg" alt="arrow" class="h-8 w-8 transition-all" /></button
 				>
 			</div>
 		</div>
 		{#if imagesToDisplay.length}
-			<div class="flex gap-x-4 h-[500px] overflow-hidden w-full justify-center xl:p-0 p-8">
+			<div class="flex gap-x-4 min-h-[500px] overflow-hidden w-full justify-center xl:p-0 p-8">
 				<div class="flex-col flex justify-end">
 					<img
 						alt={imagesToDisplay[0].title}
