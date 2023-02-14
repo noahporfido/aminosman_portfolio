@@ -38,7 +38,7 @@
 		du umso genauer hinschauen!
 	</p>
 	<div class="flex-1">
-		<div class="flex justify-center mb-8">
+		<div class="flex justify-center lg:mb-8">
 			<div class="flex items-center flex-col">
 				<p class="font-light">refresh</p>
 				<button
