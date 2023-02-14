@@ -25,19 +25,19 @@
 	};
 </script>
 
-<div class="p-8 ">
-	<h1 class="font-bold text-6xl uppercase">Amin Osman</h1>
-	<h2 class="italic text-6xl mt-2 uppercase">Portfolio</h2>
-</div>
+<div class="w-full flex flex-wrap items-center h-screen">
+	<div class="p-8 max-w-lg">
+		<h1 class="font-bold text-6xl uppercase">Amin Osman</h1>
+		<h2 class="italic text-6xl mt-2 uppercase">Portfolio</h2>
+		<p class="mt-8 ">
+			Zufall, Zufall, Zufall Klicke dich durch und lass den Zufall zu. Eine ausgewählte Sammlung von
+			Bildern seit August 2022. Verschiedenste Bilder die alle etwas mit mir zu tun haben.
+			Kombiniere und finde komische, lustige und interessante Zusammenhänge. Der Zufall bestimmt,
+			deshalb musst du umso genauer hinschauen!
+		</p>
+	</div>
 
-<div class="w-full flex flex-wrap gap-x-8">
-	<p class="mt-8 pl-8 xl:w-1/3 max-w-md">
-		Zufall, Zufall, Zufall Klicke dich durch und lass den Zufall zu. Eine ausgewählte Sammlung von
-		Bildern seit August 2022. Verschiedenste Bilder die alle etwas mit mir zu tun haben. Kombiniere
-		und finde komische, lustige und interessante Zusammenhänge. Der Zufall bestimmt, deshalb musst
-		du umso genauer hinschauen!
-	</p>
-	<div class="flex-1">
+	<div class="flex-1 flex justify-between flex-col xl:h-full py-2 lg:py-20">
 		<div class="flex justify-center lg:mb-8">
 			<div class="flex items-center flex-col">
 				<p class="font-light">refresh</p>
