@@ -50,10 +50,10 @@
 		{#if imagesToDisplay.length}
 			<div class="flex mt-8 gap-x-2 lg:p-0">
 				<div>
-					<img alt={imagesToDisplay[0].title} src={imagesToDisplay[0].url} class="w-full h-auto " />
+					<img alt={imagesToDisplay[1].title} src={imagesToDisplay[1].url} class="w-full h-auto " />
 					<p>
-						{imagesToDisplay[0].title},{imagesToDisplay[0].year},{imagesToDisplay[0]
-							.material},{imagesToDisplay[0].mass}
+						{imagesToDisplay[1].title},{imagesToDisplay[1].year},{imagesToDisplay[1]
+							.material},{imagesToDisplay[1].mass}
 					</p>
 				</div>
 				<div class="h-full border border-black hidden lg:visible" />
