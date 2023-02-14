@@ -25,8 +25,8 @@
 	};
 </script>
 
-<div class="flex flex-wrap">
-	<div class="p-8 xl:w-1/3 max-w-lg">
+<div class="block lg:flex content-start">
+	<div class="lg:p-8 p-2 xl:w-1/3 max-w-lg">
 		<h1 class="font-bold text-6xl uppercase">Amin Osman</h1>
 		<h2 class="italic text-6xl mt-2 uppercase">Portfolio</h2>
 		<p class="mt-8">
@@ -36,7 +36,7 @@
 			Zufall bestimmt, deshalb musst du umso genauer hinschauen!
 		</p>
 	</div>
-	<div class="flex-1 lg:mt-20 min-w-[900px] 3xl:max-w-6xl mx-auto overflow-y-hidden">
+	<div class="flex-1 lg:mt-20  lg:min-w-[900px] 3xl:max-w-6xl mx-auto overflow-y-hidden">
 		<div class="flex items-center flex-col  ">
 			<p class="font-light">refresh</p>
 			<button
