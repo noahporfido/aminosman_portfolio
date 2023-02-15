@@ -25,7 +25,7 @@
 	};
 </script>
 
-<div class="block lg:flex content-start">
+<div class="block lg:flex">
 	<div class="lg:p-8 p-2 xl:w-1/3 max-w-lg">
 		<h1 class="font-bold text-6xl uppercase">Amin Osman</h1>
 		<h2 class="italic text-6xl mt-2 uppercase">Portfolio</h2>
@@ -36,7 +36,7 @@
 			Zufall bestimmt, deshalb musst du umso genauer hinschauen!
 		</p>
 	</div>
-	<div class="flex-1 lg:mt-20  lg:min-w-[900px] 3xl:max-w-6xl mx-auto overflow-y-hidden">
+	<div class="flex-1 lg:mt-20  mx-auto overflow-y-hidden max-w-lg xl:max-w-3xl 3xl:max-w-5xl">
 		<div class="flex items-center flex-col  ">
 			<p class="font-light">refresh</p>
 			<button
@@ -50,15 +50,23 @@
 		{#if imagesToDisplay.length}
 			<div class="flex mt-8 gap-x-2 lg:p-0">
 				<div>
-					<img alt={imagesToDisplay[1].title} src={imagesToDisplay[1].url} class="w-full h-auto " />
+					<img
+						alt={imagesToDisplay[1].title}
+						src={imagesToDisplay[1].url}
+						class="max-w-full h-auto"
+					/>
 					<p>
 						{imagesToDisplay[1].title},{imagesToDisplay[1].year},{imagesToDisplay[1]
 							.material},{imagesToDisplay[1].mass}
 					</p>
 				</div>
-				<div class="h-full border border-black hidden lg:visible" />
+				<!-- <div class="h-full border border-black hidden lg:visible" /> -->
 				<div>
-					<img alt={imagesToDisplay[0].title} src={imagesToDisplay[0].url} class="w-full h-auto " />
+					<img
+						alt={imagesToDisplay[0].title}
+						src={imagesToDisplay[0].url}
+						class="max-w-full h-auto"
+					/>
 					<p>
 						{imagesToDisplay[0].title},{imagesToDisplay[0].year},{imagesToDisplay[0]
 							.material},{imagesToDisplay[0].mass}
